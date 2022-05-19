@@ -1,22 +1,18 @@
 const { DataTypes } = require('sequelize')
-const { sequelize } = require('../sequielize_init')
+const { sequelize } = require('../sequelize_init')
 
 
-export const User = sequelize.define('User', {
+export const VideoInPost = sequelize.define('posts_videos', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   },
-  login: {
-    type: DataTypes.STRING,
+  post_id: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  password: {
+  video_url: {
     type: DataTypes.STRING,
     allowNull: false,
   },
